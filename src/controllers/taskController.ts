@@ -32,12 +32,13 @@ export const updateTask = async (req: Request, res: Response) => {
   try {
     const { id } = req.params;
 
-    const { title, color } = req.body;
+    const { title, color, completed } = req.body;
     const updatedTask = await prisma.task.update({
       where: { id: Number(id)},
       data: {
         title,
-        color
+        color,
+        completed
       }
     })
 
