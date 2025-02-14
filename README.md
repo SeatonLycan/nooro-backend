@@ -1,0 +1,49 @@
+# Project Setup Guide
+
+## Prerequisites
+Ensure you have the following installed:
+- **Homebrew** (for macOS)
+- **MySQL**
+- **Node.js** and **npm**
+
+## Steps
+### 1. Install MySQL via Homebrew
+```
+brew install mysql
+```
+
+### 2. Start MySQL Service
+```
+brew services start mysql
+```
+
+### 3. Access MySQL
+```
+mysql -u root -p
+```
+
+### 4. Create and Use Database
+```
+CREATE DATABASE nooro_todo_db;
+USE nooro_todo_db;
+```
+
+### 5. Initailize Prisma
+```
+prisma init
+```
+
+### 6. Generate Prisma Client
+```
+npx prisma generate
+```
+
+### 7. Create Database Migration
+```
+npx prisma migrate dev --name init
+```
+
+### 8. Run the Development Server
+```
+npm run dev
+```
