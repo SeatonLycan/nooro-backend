@@ -19,7 +19,12 @@ brew services start mysql
 
 ### 3. Access MySQL
 ```
-mysql -u root -p
+mysql -u root
+```
+
+### 4. Install Packages
+```
+npm install
 ```
 
 ### 4. Create and Use Database
@@ -28,22 +33,17 @@ CREATE DATABASE nooro_todo_db;
 USE nooro_todo_db;
 ```
 
-### 5. Initailize Prisma
-```
-prisma init
-```
-
-### 6. Generate Prisma Client
+### 5. Generate Prisma Client
 ```
 npx prisma generate
 ```
 
-### 7. Create Database Migration
+### 6. Create Database Migration
 ```
 npx prisma migrate dev --name init
 ```
 
-### 8. Run the Development Server
+### 7. Run the Development Server
 ```
 npm run dev
 ```
